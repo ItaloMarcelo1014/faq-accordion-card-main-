@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+     <article class="card-content">
+       <div class="parte-1">
+        <div class="bloco-img">
+          <img src="images/illustration-woman-online-mobile.svg" alt="woman" height="155" id="woman">
+          <img src="images/bg-pattern-mobile.svg" alt="shadow"  id="shadow">
+        </div>
+        <div class="bloco-img-2">
+          <img src="images/bg-pattern-desktop.svg" alt="desk"  id="desk-1">
+          <img src="images/illustration-woman-online-desktop.svg" alt="woman"  id="woman-1">
+        </div>
+        <img src="images/illustration-box-desktop.svg" alt="box"id="box-1">
+       </div>
+       <div class="part-2">
+        <div class="container">
+          <div class="accordion-container">
+              <h3 class="header">Faq</h3>
+
+              <div class="accordion ">
+                <div class="accordion-heading">
+                  <h3>How many team members can I invite?</h3>
+                  <div class="box">
+                    <img src="images/icon-arrow-down.svg" id="down-up">
+                  </div>
+                </div>
+                <p class="accordion-content">
+                  You can invite up to 2 additional users on the Free plan. There is no limit on 
+  team members for the Premium plan.
+                </p>
+              </div>
+
+              <div class="accordion ">
+              <div class="accordion-heading">
+                <h3> What is the maximum file upload size?</h3>
+                <div class="box">
+                  <img src="images/icon-arrow-down.svg" id="down-up">
+                </div>
+              </div>
+              <p class="accordion-content">
+                No more than 2GB. All files in your account must fit your allotted storage space.
+              </p>
+              </div>
+
+
+              <div class="accordion ">
+            <div class="accordion-heading">
+              <h3>How do I reset my password?</h3>
+              <div class="box">
+                <img src="images/icon-arrow-down.svg" id="down-up">
+              </div>
+            </div>
+            <p class="accordion-content">
+              Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.
+            </p>
+             </div>
+
+
+             <div class="accordion ">
+          <div class="accordion-heading">
+            <h3> Can I cancel my subscription?</h3>
+            <div class="box">
+              <img src="images/icon-arrow-down.svg" id="down-up">
+            </div>
+          </div>
+          <p class="accordion-content">
+            Yes! Send us a message and we’ll process your request no questions asked.
+          </p>
+             </div>
+
+
+             <div class="accordion ">
+        <div class="accordion-heading">
+          <h3> Do you provide additional support?</h3>
+          <div class="box">
+            <img src="images/icon-arrow-down.svg" id="down-up">
+          </div>
+        </div>
+        <p class="accordion-content">
+          Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        </p>
+             </div>
+
+          </div>
+        </div>
+       </div>
+     </article>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Italo Marcelo</a>.
+  </div>
+
+  <script>
+     let accordions = document.querySelectorAll('.accordion-container .accordion')
+     accordions.forEach(acco => {
+        acco.onclick = () => {
+          accordions.forEach( SubAcco => { SubAcco.classList.remove('active')});
+          acco.classList.add('active');
+        }
+     })
+  </script>
+</body>
+</html>

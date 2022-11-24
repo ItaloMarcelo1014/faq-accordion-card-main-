@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    outline: none;
+    border: none;
+}
+
+body
+{
+    min-width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom,hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 0.75em;
+    
+}
+
+.accordion .accordion-heading h3
+{
+    font-size: 12px;
+}
+
+/*root colors*/
+:root
+{
+    
+    /*#### Text*/
+    
+    --dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    
+    /*#### Gradient*/
+    
+    /*Background gradient:*/
+    
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    
+    /*### Neutral*/
+    
+    /*#### Text*/
+    
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    
+    /*#### Dividers*/
+    
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+    
+}
+
+p
+{
+    color: var(--Dark-grayish-blue);
+    margin-bottom: 0;
+}
+
+/*Card-container article*/
+
+.card-content
+{
+    display: flex;
+    flex-direction: column;
+    margin: 150px 50px;
+    background-color: #fff;
+    width: 330px;
+    height: 538px;
+    border-radius: 15px;
+}
+
+/*bloco de imagem para organização*/
+
+.bloco-img
+{
+    position: relative;
+    content: '';
+    left: 65px;
+    top: -90px;
+    bottom: 0;
+}
+
+.bloco-img #woman
+{
+    z-index: 10000;
+}
+
+.bloco-img #shadow
+{
+    content: '';
+    position: relative;
+    left: -5px;
+    top: -65px;
+    bottom: 0;
+    width: 212px;
+}
+
+/* bloco 2 desativa na versão mobila*/
+.bloco-img-2
+{
+    display: none;
+}
+
+/* part 2 entrando no accordion e definições*/
+
+.part-2
+{
+    content: '';
+    position: relative;
+    top: -165px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion 
+{
+    width: 300px;
+    padding: 2px;
+    position: relative;
+    top: -10px;
+    margin: 10px; 
+}
+
+
+
+.accordion-heading
+{
+    display: flex;
+    justify-content: space-between;
+}
+/* Arrow and header*/
+
+ .box #down-up
+{
+    position: relative;
+    left: -10px;
+    top: 15px;
+}
+
+#box-1
+{
+    display: none;
+}
+
+.header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+}
+
+/*accordion before the accordion active*/
+
+.container .accordion-container .accordion .accordion-heading h3:hover
+{
+    color: var(--Soft-red);
+    cursor: pointer;
+}
+
+.container .accordion-container .accordion .accordion-heading
+{
+    border-bottom: 1px solid hsl(240, 5%, 91%);    
+}
+
+.container .accordion-container .accordion .accordion-heading h3
+{
+    color:  hsl(240, 6%, 50%);
+}
+
+
+.container .accordion-container .accordion .accordion-heading h3:hover
+{
+    color:  var(--Soft-red);
+    cursor: pointer;
+}
+
+/*Active and accordion after the accordion active*/
+
+
+
+.container .accordion-container .accordion.active .accordion-heading h3
+{
+   color:  #000;
+}
+
+
+
+.container .accordion-container .accordion.active .accordion-heading #down-up
+{
+    transform: rotate(180deg);
+    transition: transform .2s .1s;
+}
+
+
+.container .accordion-container .accordion.active .accordion-content
+{
+    display: block;
+} 
+
+
+
+.container .accordion-container .accordion .accordion-content
+{
+    border-top: 0;
+    display: none;
+    animation: animate .2s linear backwards ;
+    transform-origin: top;
+}
+
+
+/*Responsividade*/
+@media (min-width: 1140px) {
+
+    
+body
+{
+    min-width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to bottom,hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 0.75em;
+    overflow: hidden;
+}
+
+ .card-content
+ {
+     flex-direction: column;
+     min-width: 923px;
+     min-height: 515px;
+     margin: 250px auto;
+     position: relative;
+     top: 25px;
+}
+
+.bloco-img-2
+{
+     overflow: hidden;
+ }
+
+.accordion-container
+{
+     position: relative;
+     top: -1260px;
+     bottom: 0;
+     left: 195px;
+}
+    
+.header
+{
+    display: flex;
+    padding-left: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+}
+    
+.accordion 
+{
+     width: 400px;
+     padding: 2px;
+     position: relative;
+     top: -10px;
+     bottom: 0;
+     margin: 10px;
+}
+
+
+ .bloco-img
+ {
+    display: none;
+}
+
+.bloco-img-2
+{
+    display:block; 
+}
+
+#desk-1
+{
+    position: relative;
+    bottom: 275px;
+    right: 580px;
+    width: 950px;
+}
+
+#woman-1
+{
+    position: relative;
+    bottom: 850px;
+    right: 85px;
+    width: 460px;
+}
+
+#box-1
+{
+    display: block;
+    position: relative;
+    top: -1069px;
+    right: 125px;
+    z-index: 100;
+}
+
+}
+
+
+@keyframes  animate 
+{
+    0%{
+        transform: scaleY(0);
+    }
+}
